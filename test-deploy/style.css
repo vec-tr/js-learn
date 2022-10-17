@@ -70,12 +70,14 @@ body {
 
 .btn {
   display: inline-block;
+  text-align: start;
   background-color: var(--color-primary);
   font-size: 1.6rem;
   font-family: inherit;
   font-weight: 500;
   border: none;
-  padding: 1.25rem 4.5rem;
+  /* padding: 1.25rem 4.5rem; */
+  padding: 0.5rem 1rem;
   border-radius: 10rem;
   cursor: pointer;
   transition: all 0.3s;
@@ -275,19 +277,25 @@ h4 {
 /* OPERATIONS */
 .operations {
   max-width: 100rem;
-  margin: 12rem auto 0 auto;
-
+  margin: 8rem auto 0 auto;
   background-color: #fff;
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  align-items: center;
+  width: auto;
+  height: 350px;
 }
-
-.operations__tab-container {
-  display: flex;
-  justify-content: center;
+.operations_content {
+  width: auto;
+  height: 300px;
 }
-
 .operations__tab {
-  margin-right: 2.5rem;
-  transform: translateY(-50%);
+  /* margin-right: 2.5rem;
+  transform: translateY(-50%); */
+  margin-bottom: 10px;
+  margin-top: 10px;
+  background-color: #f3f3f3;
+  margin-left: 5px;
 }
 
 .operations__tab span {
@@ -296,25 +304,12 @@ h4 {
   display: inline-block;
 }
 
-.operations__tab--1 {
-  background-color: var(--color-secondary);
-}
-
-.operations__tab--1:hover {
-  background-color: var(--color-secondary-darker);
-}
-
-.operations__tab--3 {
-  background-color: var(--color-tertiary);
-  margin: 0;
-}
-
-.operations__tab--3:hover {
-  background-color: var(--color-tertiary-darker);
+.operations__tab:hover {
+  background-color: var(--color-primary-darker);
 }
 
 .operations__tab--active {
-  transform: translateY(-66%);
+  background-color: var(--color-primary-darker);
 }
 
 .operations__content {
@@ -326,10 +321,12 @@ h4 {
 }
 
 .operations__content--active {
-  display: grid;
+  /* display: grid;
   grid-template-columns: 7rem 1fr;
   column-gap: 3rem;
-  row-gap: 0.5rem;
+  row-gap: 0.5rem; */
+  display: block;
+  /* padding: 2.5rem 7rem 6.5rem 7rem; */
 }
 
 .operations__header {
@@ -337,7 +334,7 @@ h4 {
   font-weight: 500;
   align-self: center;
 }
-
+/*
 .operations__icon {
   display: flex;
   align-items: center;
@@ -359,7 +356,7 @@ h4 {
 .operations__icon--1 {
   background-color: var(--color-secondary-opacity);
 }
-.operations__icon--2 {
+ .operations__icon--2 {
   background-color: var(--color-primary-opacity);
 }
 .operations__icon--3 {
@@ -373,7 +370,7 @@ h4 {
 }
 .operations__icon--3 svg {
   fill: var(--color-tertiary);
-}
+} */
 
 /* SLIDER */
 .slider {
