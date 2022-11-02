@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="calculator_style.css" />
+    <script defer src="calculator.js"></script>
   </head>
   <body>
     <header class="header">
@@ -26,22 +27,47 @@
       <div>
         <ol class="reno-cal-ol-application">
           <li>
-            <button class="reno-cal-btn">Residential</button>
+            <button
+              class="reno-cal-btn-app-res reno-cal-btn"
+              value="residential"
+            >
+              Residential
+            </button>
           </li>
           <li>
-            <button class="reno-cal-btn">Commercial</button>
+            <button
+              class="reno-cal-btn-app-com reno-cal-btn"
+              value="commercial"
+            >
+              Commercial
+            </button>
           </li>
         </ol>
       </div>
       <div>
         <h2 class="reno_cal_header">Type</h2>
         <ol class="reno-cal-ol-type">
-          <li><button class="reno-cal-btn">Tariff Based</button></li>
-          <li><button class="reno-cal-btn">Area Based</button></li>
-          <li><button class="reno-cal-btn">Capacity Based</button></li>
+          <li>
+            <button
+              class="reno-cal-btn-type-tariff reno-cal-btn"
+              value="tariff"
+            >
+              Tariff Based
+            </button>
+          </li>
+          <li>
+            <button class="reno-cal-btn-type-area reno-cal-btn" value="area">
+              Area Based
+            </button>
+          </li>
+          <li>
+            <button class="reno-cal-btn-type-cap reno-cal-btn" value="cap">
+              Capacity Based
+            </button>
+          </li>
         </ol>
       </div>
-      <div class="reno-inputs-div">
+      <div class="reno-inputs-div reno-inputs-div-bill">
         <table>
           <thead>
             <tr>
@@ -51,11 +77,11 @@
           <tbody>
             <tr>
               <td class="reno-table-label">Avg Monthly Electricity Bill</td>
-              <td><input type="text" class="reno-input" /></td>
+              <td><input type="text" class="reno-input avg-monthly-bill" /></td>
             </tr>
             <tr>
               <td class="reno-table-label">Per KW RTS Cost</td>
-              <td><input type="text" class="reno-input" /></td>
+              <td><input type="text" class="reno-input perKwCost" /></td>
             </tr>
           </tbody>
         </table>
@@ -104,7 +130,13 @@
           </tbody>
         </table>
       </div>
-      <button type="submit" class="reno-cal-btn reno-submit-btn">Submit</button>
+      <button
+        type="submit"
+        class="reno-cal-btn-type-submit reno-cal-btn reno-submit-btn"
+      >
+        Submit
+      </button>
     </div>
+    <div class="reno-calc-result">Here is your Quotation</div>
   </body>
 </html>
