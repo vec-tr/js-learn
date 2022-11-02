@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="calculator_style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <img
+          src="img/black-green-removebg-preview.png"
+          alt="Renowatt logo"
+          class="nav__logo"
+          id="logo"
+          designer="Reno"
+          data-version-number="3.0"
+        />
+      </nav>
+    </header>
+    <div class="reno_cal_body">
+      <h2 class="reno_cal_header">Calculator</h2>
+      <div>
+        <ol class="reno-cal-ol-application">
+          <li>
+            <button class="reno-cal-btn">Residential</button>
+          </li>
+          <li>
+            <button class="reno-cal-btn">Commercial</button>
+          </li>
+        </ol>
+      </div>
+      <div>
+        <h2 class="reno_cal_header">Type</h2>
+        <ol class="reno-cal-ol-type">
+          <li><button class="reno-cal-btn">Tariff Based</button></li>
+          <li><button class="reno-cal-btn">Area Based</button></li>
+          <li><button class="reno-cal-btn">Capacity Based</button></li>
+        </ol>
+      </div>
+      <div class="reno-inputs-div">
+        <table>
+          <thead>
+            <tr>
+              <th colspan="2" class="reno_input_header">Tariff Inputs</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="reno-table-label">Avg Monthly Electricity Bill</td>
+              <td><input type="text" class="reno-input" /></td>
+            </tr>
+            <tr>
+              <td class="reno-table-label">Per KW RTS Cost</td>
+              <td><input type="text" class="reno-input" /></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="reno-inputs-div">
+        <table>
+          <thead>
+            <tr>
+              <th colspan="2" class="reno_input_header">Area Inputs</th>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="reno-table-label">Area Available in Sq.ft</td>
+              <td><input type="text" class="reno-input" /></td>
+            </tr>
+            <tr></tr>
+            <tr>
+              <td class="reno-table-label">Per KW RTS Cost</td>
+              <td><input type="text" class="reno-input" /></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="reno-inputs-div">
+        <table>
+          <thead>
+            <tr>
+              <th colspan="2" class="reno_input_header">Capacity Inputs</th>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="reno-table-label">Capacity of the Plant</td>
+              <td><input type="text" class="reno-input" /></td>
+            </tr>
+            <tr></tr>
+            <tr>
+              <td class="reno-table-label">Per KW RTS Cost</td>
+              <td><input type="text" class="reno-input" /></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <button type="submit" class="reno-cal-btn reno-submit-btn">Submit</button>
+    </div>
+  </body>
+</html>

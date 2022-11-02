@@ -1,0 +1,83 @@
+.header {
+  height: 100%;
+}
+.reno_cal_body {
+  margin: 0 auto;
+  background-color: lightgrey;
+  width: 600px;
+}
+.reno_cal_header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.reno-cal-btn {
+  background-color: darkgrey;
+  border: none;
+  font-size: 20px;
+  font-family: sans-serif;
+  margin-bottom: 10px;
+  padding: 0.8rem 2.5rem;
+  border-radius: 3rem;
+}
+
+.reno-cal-btn:hover {
+  background-color: darkgreen;
+}
+.reno-cal-btn:active {
+  background-color: darkgreen;
+}
+
+.reno-cal-ol-type {
+  list-style: none;
+  margin-left: 60px;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 20px;
+}
+
+.reno-cal-ol-application {
+  list-style: none;
+  margin-left: 90px;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 90px;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  /* border: 3px solid purple; */
+}
+
+.reno-table-label {
+  font-family: sans-serif;
+  font-size: 20px;
+  /* margin-right: 20px; */
+  font-weight: bold;
+  text-align: start;
+}
+.reno-input {
+  width: 70%;
+  padding: 5px 5px;
+  background-color: #e8e8e8;
+  border: 2px solid #ccc;
+  font-family: sans-serif;
+  font-size: 20px;
+}
+.reno_input_header {
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+.reno-inputs-div {
+  margin: 20px;
+  overflow: auto;
+}
+.reno-submit-btn {
+  background-color: green;
+  cursor: pointer;
+  margin-left: 40%;
+  margin-bottom: 10px;
+}
