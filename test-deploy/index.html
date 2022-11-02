@@ -1,0 +1,319 @@
+-<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" type="image/png" href="img/R-logo.png" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Renowatt | We Power Your Rooftop</title>
+
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <img
+          src="img/black-green-removebg-preview.png"
+          alt="Renowatt logo"
+          class="nav__logo"
+          id="logo"
+          designer="Reno"
+          data-version-number="3.0"
+        />
+        <ul class="nav__links">
+          <li class="nav__item">
+            <a class="nav__link" href="#section--1">Features</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#section--2">Benefits</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#section--3">Projects</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#section--4">Calculator</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#section--5">Contact us</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link nav__link--btn btn--show-modal" href="#"
+              >Register</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header__title">
+        <!-- <h1 onclick="alert('HTML alert')"> -->
+        <h1>
+          We
+          <!-- Green highlight effect -->
+          <span class="highlight">Power</span>
+          Your<br />
+          <span class="highlight">Rooftop</span>
+        </h1>
+        <h4>We provide rooftop solar installation that generates power</h4>
+        <button class="btn--text btn--scroll-to">Learn more &DownArrow;</button>
+        <img
+          src="img/rts-rooftop.jpg"
+          class="header__img"
+          alt="Minimalist bank items"
+        />
+      </div>
+    </header>
+
+    <section class="section" id="section--1">
+      <div class="section__title">
+        <h2 class="section__description">Features</h2>
+        <h3 class="section__header">
+          Everything you need to know about on grid solar system.
+        </h3>
+      </div>
+
+      <div class="features">
+        <img
+          src="img/rts-technical.gif"
+          data-src="img/rts-technical.gif"
+          alt="Solar Plant"
+          class="features__img lazy-img"
+          width="380px"
+          height="370px"
+        />
+        <div class="features__feature">
+          <p>
+            The on-grid solar roof top system converts solar power into grid
+            power. The roof top system consists of a series of solar panels
+            which are mounted on roof and connected together to convert solar
+            radiation to electrical energy. The electrical energy from the
+            series of panels is fed into an inverter so that the energy can be
+            converted in alternating current compatible with grid power. Hence,
+            the system will only work when there is constant electricity supply
+            from the power grid.
+          </p>
+        </div>
+
+        <!-- <div class="features__feature">
+          <div class="features__icon">
+            <svg>
+              <use xlink:href="img/icons.svg#icon-trending-up"></use>
+            </svg>
+          </div>
+          <h5 class="features__header">Watch your money grow</h5>
+          <p>
+            Nesciunt quos autem dolorum voluptates cum dolores dicta fuga
+            inventore ab? Nulla incidunt eius numquam sequi iste pariatur
+            quibusdam!
+          </p>
+        </div>
+        <img
+          src="img/grow-lazy.jpg"
+          data-src="img/grow.jpg"
+          alt="Plant"
+          class="features__img lazy-img"
+        />
+
+        <img
+          src="img/card-lazy.jpg"
+          data-src="img/card.jpg"
+          alt="Credit card"
+          class="features__img lazy-img"
+        />
+        <div class="features__feature">
+          <div class="features__icon">
+            <svg>
+              <use xlink:href="img/icons.svg#icon-credit-card"></use>
+            </svg>
+          </div>
+          <h5 class="features__header">Free debit card included</h5>
+          <p>
+            Quasi, fugit in cumque cupiditate reprehenderit debitis animi enim
+            eveniet consequatur odit quam quos possimus assumenda dicta fuga
+            inventore ab.
+          </p>
+        </div> -->
+      </div>
+    </section>
+
+    <section class="section" id="section--2">
+      <div class="section__title">
+        <h2 class="section__description">Benefits</h2>
+        <h3 class="section__header">Let our children breath cleaner air.</h3>
+      </div>
+
+      <div class="operations">
+        <div class="operations__tab-container">
+          <button
+            class="btn operations__tab operations__tab--1 operations__tab--active"
+            data-tab="1"
+          >
+            <span>01</span>Zero electricity bill
+          </button>
+          <button class="btn operations__tab operations__tab--2" data-tab="2">
+            <span>02</span>Penalty protection
+          </button>
+          <button class="btn operations__tab operations__tab--3" data-tab="3">
+            <span>03</span>Good investment option
+          </button>
+          <button class="btn operations__tab operations__tab--4" data-tab="4">
+            <span>04</span>Early payback period
+          </button>
+          <button class="btn operations__tab operations__tab--5" data-tab="5">
+            <span>05</span>Govt. subsidy
+          </button>
+          <button class="btn operations__tab operations__tab--5" data-tab="5">
+            <span>06</span>Carbon footprint reduction
+          </button>
+          <button class="btn operations__tab operations__tab--5" data-tab="5">
+            <span>07</span>Maintainance Free
+          </button>
+          <button class="btn operations__tab operations__tab--5" data-tab="5">
+            <span>08</span>Tariff protection
+          </button>
+        </div>
+        <div class="operations_content">
+          <div
+            class="operations__content operations__content--1 operations__content--active"
+          >
+            <h5 class="operations__header">
+              Find capacity of the solar plant required to zero your electricity
+              bill.
+            </h5>
+            <p>
+              Enter the electricity bill in our calculator and our system will
+              let you know the capacity of solar plant to be installed. So that
+              your electricity bill will be zero.
+            </p>
+          </div>
+
+          <div class="operations__content operations__content--2">
+            <h5 class="operations__header">
+              Solar plant with proposed capacity will save use from penalty.
+            </h5>
+            <p>
+              If load applied on the meter goes beyond the allocated meter cap,
+              then it will lead to penalty. This can be avoided with the rooftop
+              solar plant by sufficient electricity required by our homes needs.
+            </p>
+          </div>
+          <div class="operations__content operations__content--3">
+            <h5 class="operations__header">
+              Solar power plant is an appreciating asset.
+            </h5>
+            <p>
+              Rooftop solar is considered to be better investment class asset
+              that gives more than 15% return a year.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="section--3">
+      <div class="section__title section__title--testimonials">
+        <h2 class="section__description">Projects</h2>
+        <h3 class="section__header">
+          These are our few rooftop solar plant projects commissioned.
+        </h3>
+      </div>
+
+      <div class="slider">
+        <div class="slide">
+          <div class="testimonial">
+            <h5 class="testimonial__header">Best financial decision ever!</h5>
+            <blockquote class="testimonial__text">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Accusantium quas quisquam non? Quas voluptate nulla minima
+              deleniti optio ullam nesciunt, numquam corporis et asperiores
+              laboriosam sunt, praesentium suscipit blanditiis. Necessitatibus
+              id alias reiciendis, perferendis facere pariatur dolore veniam
+              autem esse non voluptatem saepe provident nihil molestiae.
+            </blockquote>
+            <address class="testimonial__author">
+              <img src="img/user-1.jpg" alt="" class="testimonial__photo" />
+              <h6 class="testimonial__name">Aarav Lynn</h6>
+              <p class="testimonial__location">San Francisco, USA</p>
+            </address>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="testimonial">
+            <h5 class="testimonial__header">
+              The last step to becoming a complete minimalist
+            </h5>
+            <blockquote class="testimonial__text">
+              Quisquam itaque deserunt ullam, quia ea repellendus provident,
+              ducimus neque ipsam modi voluptatibus doloremque, corrupti
+              laborum. Incidunt numquam perferendis veritatis neque repellendus.
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo
+              deserunt exercitationem deleniti.
+            </blockquote>
+            <address class="testimonial__author">
+              <img src="img/user-2.jpg" alt="" class="testimonial__photo" />
+              <h6 class="testimonial__name">Miyah Miles</h6>
+              <p class="testimonial__location">London, UK</p>
+            </address>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="testimonial">
+            <h5 class="testimonial__header">
+              Finally free from old-school banks
+            </h5>
+            <blockquote class="testimonial__text">
+              Debitis, nihil sit minus suscipit magni aperiam vel tenetur
+              incidunt commodi architecto numquam omnis nulla autem,
+              necessitatibus blanditiis modi similique quidem. Odio aliquam
+              culpa dicta beatae quod maiores ipsa minus consequatur error sunt,
+              deleniti saepe aliquid quos inventore sequi. Necessitatibus id
+              alias reiciendis, perferendis facere.
+            </blockquote>
+            <address class="testimonial__author">
+              <img src="img/user-3.jpg" alt="" class="testimonial__photo" />
+              <h6 class="testimonial__name">Francisco Gomes</h6>
+              <p class="testimonial__location">Lisbon, Portugal</p>
+            </address>
+          </div>
+        </div>
+
+        <button class="slider__btn slider__btn--left">&larr;</button>
+        <button class="slider__btn slider__btn--right">&rarr;</button>
+        <div class="dots"></div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p class="footer__copyright">
+        &copy; Copyright by Renowatt Infinite Energy Pvt. Ltd.
+      </p>
+    </footer>
+
+    <div class="modal hidden">
+      <button class="btn--close-modal">&times;</button>
+      <h2 class="modal__header">
+        Register for &nbsp;<span class="highlight">Rooftop Solar</span>
+        &nbsp;Installation
+      </h2>
+      <form class="modal__form">
+        <label>First Name</label>
+        <input type="text" />
+        <label>Last Name</label>
+        <input type="text" />
+        <label>Mobile Number</label>
+        <input type="number" />
+        <button class="btn">Next step &rarr;</button>
+      </form>
+    </div>
+    <div class="overlay hidden"></div>
+
+    <!-- <script src="script.js"></script> -->
+  </body>
+</html>
