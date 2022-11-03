@@ -56,13 +56,10 @@ renoCalcTypeCap.addEventListener('click', function (e) {
   areaSectionSelector.style.display = 'none';
   capSectionSelector.style.display = 'block';
 
-  calcObj.capacity = e.target.value;
+  calcObj.type = e.target.value;
 });
 
 renoCalcSubmit.addEventListener('click', function (e) {
-  console.log(calcObj.application);
-  console.log(calcObj.type);
-
   //   if (!calcObj || !calcObj.application || calcObj.type) {
   //     alert('Missing input');
   //   }
@@ -130,12 +127,43 @@ renoCalcSubmit.addEventListener('click', function (e) {
 
     effArea = effArea / 10.764;
   } else if (calcObj.type === 'cap') {
-    const capacity = Number(document.querySelector('.reno-capacity').value);
+    const plantCap = Number(document.querySelector('.reno-capacity').value);
 
     const perKwCost = Number(
       document.querySelector('.reno-per-kw-cost-cap').value
     );
 
-    console.log(capacity, perKwCost);
+    console.log(plantCap, perKwCost);
+
+    const grossInvestment = plantCap * perKwCost;
+
+    var subsidy;
+    if (calcObj.application === 'residential') {
+      if (plantCap <= 3) {
+        subsidy = 14588 * plantCap;
+      } else if (plantCap > 10) {
+        subsidy = 94822;
+      } else {
+        subsidy = 14588 * 3 + 7294 * (plantCap - 3);
+      }
+    } else {
+      subsidy = 0;
+    }
+
+    const netInvestment = grossInvestment - subsidy;
+    const area = plantCap * 100;
+    const roiPerYear = 135 * 12 * 4 * plantCap;
+    const payBackPeriod = Math.trunc(netInvestment / roiPerYear);
+    const payBackPeriodPerc = ((roiPerYear * 100) / netInvestment).toFixed(2);
+
+    renoCalcResult.insertAdjacentHTML(
+      'afterend',
+      `<p>Total investment ${grossInvestment}</p>
+      <p>Total subsidy ${subsidy}</p>
+      <p>Net investment ${netInvestment}</p>
+      <p>Area required apprx. ${area}-${area + 100} sq feet</p>
+      <p>Return on investment per year ${roiPerYear} in percentage ${payBackPeriodPerc}</p>
+      <p>Pay back period ${payBackPeriod}</p>`
+    );
   }
 });
