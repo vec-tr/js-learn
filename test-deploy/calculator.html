@@ -24,49 +24,37 @@
     </header>
     <div class="reno_cal_body">
       <h2 class="reno_cal_header">Calculator</h2>
+      <p class="reno-p">Please choose boxes as per the requirement</p>
       <div>
-        <ol class="reno-cal-ol-application">
-          <li>
-            <button
-              class="reno-cal-btn-app-res reno-cal-btn"
-              value="residential"
-            >
-              Residential
-            </button>
-          </li>
-          <li>
-            <button
-              class="reno-cal-btn-app-com reno-cal-btn"
-              value="commercial"
-            >
-              Commercial
-            </button>
-          </li>
-        </ol>
+      <div class="reno-application">
+        <div class="reno-appl-input">
+            <label><input type="checkbox" class="Residential" />
+                <span>Residential</span></label>
+        </div>
+        <div class="reno-appl-input">
+            <label>
+            <input type="checkbox" />
+            <span>Commercial</span></label>
       </div>
-      <div>
-        <h2 class="reno_cal_header">Type</h2>
-        <ol class="reno-cal-ol-type">
-          <li>
-            <button
-              class="reno-cal-btn-type-tariff reno-cal-btn"
-              value="tariff"
-            >
-              Tariff Based
-            </button>
-          </li>
-          <li>
-            <button class="reno-cal-btn-type-area reno-cal-btn" value="area">
-              Area Based
-            </button>
-          </li>
-          <li>
-            <button class="reno-cal-btn-type-cap reno-cal-btn" value="cap">
-              Capacity Based
-            </button>
-          </li>
-        </ol>
-      </div>
+    </div>
+    <h2 class="reno_cal_header">Type</h2>
+      <div class="reno-types">      
+        
+            <div class="reno-type-input">
+                <label><input type="checkbox" />
+                    <span>Tariff</span></label>
+            </div>
+            <div class="reno-type-input">
+                <label><input type="checkbox" />
+                    <span>Area</span></label>
+            </div>
+            <div class="reno-type-input">
+                <label><input type="checkbox" />
+                    <span>Capacity</span></label>
+            </div>
+       
+    </div>
+
       <div class="reno-inputs-div" id="reno-inputs-div-bill">
         <table>
           <thead>
