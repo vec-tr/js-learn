@@ -21,10 +21,10 @@
   border-radius: 3rem;
 }
 
-.reno-cal-btn:hover {
+.reno-cal-btn:hover:focus {
   background-color: darkgreen;
 }
-.reno-cal-btn:active {
+.reno-cal-btn:focus {
   background-color: darkgreen;
 }
 
@@ -76,8 +76,16 @@ table {
   overflow: auto;
 }
 .reno-submit-btn {
-  background-color: green;
+  background-color: darkgrey;
   cursor: pointer;
   margin-left: 40%;
   margin-bottom: 10px;
+}
+
+.reno-submit-btn:hover {
+  background-color: green;
+}
+
+.reno-submit-btn:focus {
+  background-color: green;
 }
