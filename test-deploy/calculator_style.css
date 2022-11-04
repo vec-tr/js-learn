@@ -8,42 +8,71 @@
 }
 .reno_cal_header {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
-
-.reno-cal-btn {
-  background-color: darkgrey;
-  border: none;
-  font-size: 20px;
+.reno-p {
+  font-size: 13px;
   font-family: sans-serif;
   margin-bottom: 10px;
-  padding: 0.8rem 2.5rem;
-  border-radius: 3rem;
+  font-weight: bold;
+  color: black;
+  margin-left: 10px;
 }
 
-.reno-cal-btn:hover:focus {
-  background-color: darkgreen;
-}
-.reno-cal-btn:focus {
-  background-color: darkgreen;
-}
-
-.reno-cal-ol-type {
-  list-style: none;
-  margin-left: 60px;
+/* CSS Inputs */
+.reno-application {
   display: flex;
-  justify-content: space-between;
-  margin-right: 20px;
-}
-
-.reno-cal-ol-application {
-  list-style: none;
   margin-left: 90px;
-  display: flex;
   justify-content: space-between;
   margin-right: 90px;
 }
+.reno-types {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 30px;
+}
+.reno-appl-input {
+  margin: 2px;
+  background-color: #b9bbbd;
+  /* border-radius: 4px; */
+  border: 1px solid #fff;
+  overflow: hidden;
+  width: 150px;
+}
+.reno-type-input {
+  margin: 2px;
+  background-color: #b9bbbd;
+  /* border-radius: 4px; */
+  border: 1px solid #fff;
+  overflow: hidden;
+  width: 120px;
+}
+.reno-type-input input:checked + span {
+  color: #0c0c0c;
+  /* text-shadow: 0 0 6px rgba(0, 0, 0, 0.8); */
+  background-color: #5ec576;
+}
+.reno-appl-input input:checked + span {
+  color: #0c0c0c;
+  /* text-shadow: 0 0 6px rgba(0, 0, 0, 0.8); */
+  background-color: #5ec576;
+}
+label span {
+  text-align: center;
+  /* padding: 3px 0; */
+  display: block;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+label input {
+  position: absolute;
+  display: none;
+  color: #fff !important;
+}
 
+/* Table Inputs */
 table {
   table-layout: fixed;
   width: 100%;
@@ -75,10 +104,31 @@ table {
   margin: 20px;
   overflow: auto;
 }
+/* Submit button */
+.btn {
+  display: inline-block;
+  text-align: start;
+  background-color: var(--color-primary);
+  font-size: 1.6rem;
+  font-family: inherit;
+  font-weight: 500;
+  border: none;
+  /* padding: 1.25rem 4.5rem; */
+  padding: 0.5rem 1rem;
+  border-radius: 10rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
 .reno-submit-btn {
   background-color: darkgrey;
   cursor: pointer;
-  margin-left: 40%;
+  font-size: 1.6rem;
+  font-weight: 500;
+  /* transition: all 0.3s; */
+  border: none;
+  padding: 0.6rem 2rem;
+  border-radius: 5rem;
+  margin-left: 42%;
   margin-bottom: 10px;
 }
 
