@@ -1,69 +1,86 @@
 'use = strict';
 
 const calcObj = {};
-const renoCalcAppRes = document.querySelector('.reno-cal-btn-app-res');
-const renoCalcAppCom = document.querySelector('.reno-cal-btn-app-com');
-const renoCalcSubmit = document.querySelector('.reno-submit-btn');
 
-const renoCalcTypeTariff = document.querySelector('.reno-cal-btn-type-tariff');
-const renoCalcTypeArea = document.querySelector('.reno-cal-btn-type-area');
-const renoCalcTypeCap = document.querySelector('.reno-cal-btn-type-cap');
+const renoCalcResult = document.querySelector('.reno-submit-btn');
 
-const renoCalcResult = document.querySelector('.reno-calc-result');
-
-const tariffSectionSelector = document.getElementById('reno-inputs-div-bill');
-const areaSectionSelector = document.getElementById('reno-inputs-div-area');
-const capSectionSelector = document.getElementById('reno-inputs-div-cap');
+const tariffSectionSelector = document.getElementById('reno_inputs_div_bill');
+const areaSectionSelector = document.getElementById('reno_inputs_div_area');
+const capSectionSelector = document.getElementById('reno_inputs_div_cap');
 
 tariffSectionSelector.style.display = 'none';
 areaSectionSelector.style.display = 'none';
 capSectionSelector.style.display = 'none';
 
-renoCalcAppRes.addEventListener('click', function (e) {
+const renoAppCheckBoxRes = function () {
   tariffSectionSelector.style.display = 'none';
   areaSectionSelector.style.display = 'none';
   capSectionSelector.style.display = 'none';
 
-  calcObj.application = e.target.value;
-});
+  document.getElementById('reno_app_comm').checked = false;
+  calcObj.application = document.getElementById('reno_app_res').value;
 
-renoCalcAppCom.addEventListener('click', function (e) {
+  console.log(calcObj.application);
+};
+
+const renoAppCheckBoxComm = function () {
   tariffSectionSelector.style.display = 'none';
   areaSectionSelector.style.display = 'none';
   capSectionSelector.style.display = 'none';
 
-  calcObj.application = e.target.value;
-});
+  document.getElementById('reno_app_res').checked = false;
+  calcObj.application = document.getElementById('reno_app_comm').value;
 
-renoCalcTypeTariff.addEventListener('click', function (e) {
+  console.log(calcObj.application);
+};
+
+const renoTypeBill = function () {
   tariffSectionSelector.style.display = 'block';
   areaSectionSelector.style.display = 'none';
   capSectionSelector.style.display = 'none';
 
-  calcObj.type = e.target.value;
-});
+  document.getElementById('reno_type_area').checked = false;
+  document.getElementById('reno_type_cap').checked = false;
 
-renoCalcTypeArea.addEventListener('click', function (e) {
+  calcObj.type = document.getElementById('reno_type_bill').value;
+
+  console.log(calcObj.type);
+};
+
+const renoTypeArea = function () {
   tariffSectionSelector.style.display = 'none';
   areaSectionSelector.style.display = 'block';
   capSectionSelector.style.display = 'none';
 
-  calcObj.type = e.target.value;
-});
+  document.getElementById('reno_type_bill').checked = false;
+  document.getElementById('reno_type_cap').checked = false;
 
-renoCalcTypeCap.addEventListener('click', function (e) {
+  calcObj.type = document.getElementById('reno_type_area').value;
+
+  console.log(calcObj.type);
+};
+
+const renoTypeCap = function () {
   tariffSectionSelector.style.display = 'none';
   areaSectionSelector.style.display = 'none';
   capSectionSelector.style.display = 'block';
 
-  calcObj.type = e.target.value;
-});
+  document.getElementById('reno_type_area').checked = false;
+  document.getElementById('reno_type_bill').checked = false;
 
-renoCalcSubmit.addEventListener('click', function (e) {
+  calcObj.type = document.getElementById('reno_type_cap').value;
+
+  console.log(calcObj.type);
+};
+
+renoCalcResult.addEventListener('click', function (e) {
   //   if (!calcObj || !calcObj.application || calcObj.type) {
   //     alert('Missing input');
   //   }
-  if (calcObj.type === 'tariff') {
+
+  console.log('RENO CALC Result', calcObj.type);
+
+  if (calcObj.type === 'bill') {
     const avgMonthlyBill = Number(
       document.querySelector('.avg-monthly-bill').value
     );
