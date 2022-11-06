@@ -28,12 +28,12 @@
       <div>
       <div class="reno-application">
         <div class="reno-appl-input">
-            <label><input type="checkbox" class="Residential" />
+            <label><input type="checkbox" id="reno_app_res" value="residential" onclick="renoAppCheckBoxRes(this)" />
                 <span>Residential</span></label>
         </div>
         <div class="reno-appl-input">
             <label>
-            <input type="checkbox" />
+            <input type="checkbox" id="reno_app_comm" value="commercial" onclick="renoAppCheckBoxComm(this)" />
             <span>Commercial</span></label>
       </div>
     </div>
@@ -41,21 +41,21 @@
       <div class="reno-types">      
         
             <div class="reno-type-input">
-                <label><input type="checkbox" />
-                    <span>Tariff</span></label>
+                <label><input type="checkbox" id="reno_type_bill" value="bill" onclick="renoTypeBill(this)"/>
+                    <span>Electricity bill</span></label>
             </div>
             <div class="reno-type-input">
-                <label><input type="checkbox" />
+                <label><input type="checkbox" id="reno_type_area" value="area" onclick="renoTypeArea(this)"/>
                     <span>Area</span></label>
             </div>
             <div class="reno-type-input">
-                <label><input type="checkbox" />
+                <label><input type="checkbox" id="reno_type_cap" value="cap" onclick="renoTypeCap(this)"/>
                     <span>Capacity</span></label>
             </div>
        
     </div>
 
-      <div class="reno-inputs-div" id="reno-inputs-div-bill">
+      <div class="reno-inputs-div" id="reno_inputs_div_bill">
         <table>
           <thead>
             <tr>
@@ -76,7 +76,7 @@
           </tbody>
         </table>
       </div>
-      <div class="reno-inputs-div" id="reno-inputs-div-area">
+      <div class="reno-inputs-div" id="reno_inputs_div_area">
         <table>
           <thead>
             <tr>
@@ -102,7 +102,7 @@
           </tbody>
         </table>
       </div>
-      <div class="reno-inputs-div" id="reno-inputs-div-cap">
+      <div class="reno-inputs-div" id="reno_inputs_div_cap">
         <table>
           <thead>
             <tr>
