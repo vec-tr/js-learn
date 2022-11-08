@@ -17,6 +17,9 @@ const renoTypeAreaEl = document.getElementById('reno_type_area');
 const renoTypeCapEl = document.getElementById('reno_type_cap');
 const renoShowResultEl = document.querySelector('.reno-show-result');
 
+const renoAvgMonthlyBill = document.querySelector('.avg-monthly-bill');
+const renoPerKwCost = document.querySelector('.reno-per-kw-cost-bill');
+
 const renoBillForYear = document.querySelector('.reno-bill-for-year');
 const renoTotalUnits = document.querySelector('.reno-total-units');
 const renoPlantCap = document.querySelector('.reno-plant-capacity');
@@ -113,18 +116,9 @@ renoCalcResult.addEventListener('click', function (e) {
   //   if (!calcObj || !calcObj.application || calcObj.type) {
   //     alert('Missing input');
   //   }
-
-  renoShowResultEl.style.display = 'block';
-
   if (calcObj.type === 'bill') {
-    const avgMonthlyBill = Number(
-      document.querySelector('.avg-monthly-bill').value
-    );
-    console.log(avgMonthlyBill);
-    const perKwCost = Number(
-      document.querySelector('.reno-per-kw-cost-bill').value
-    );
-    console.log(perKwCost);
+    const avgMonthlyBill = Number(renoAvgMonthlyBill.value);
+    const perKwCost = Number(renoPerKwCost.value);
 
     const units = avgMonthlyBill / 4;
     const billForYear = avgMonthlyBill * 12;
@@ -161,6 +155,9 @@ renoCalcResult.addEventListener('click', function (e) {
     renoROCEPer.value = `${payBackPeriodPerc}%`;
     renoPayBack.value = `${payBackPeriod} years`;
 
+    renoAvgMonthlyBill.value = '';
+    renoPerKwCost.value = '';
+    renoShowResultEl.style.display = 'block';
     renoBackBtn.style.display = 'block';
   } else if (calcObj.type === 'area') {
     const areaAvailable = Number(
