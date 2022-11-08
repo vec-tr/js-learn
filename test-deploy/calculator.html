@@ -42,7 +42,7 @@
         
             <div class="reno-type-input">
                 <label><input type="checkbox" id="reno_type_bill" value="bill" onclick="renoTypeBill(this)"/>
-                    <span>Electricity bill</span></label>
+                    <span>Electricity Bill</span></label>
             </div>
             <div class="reno-type-input">
                 <label><input type="checkbox" id="reno_type_area" value="area" onclick="renoTypeArea(this)"/>
@@ -82,8 +82,6 @@
             <tr>
               <th colspan="2" class="reno_input_header">Area Inputs</th>
             </tr>
-            <tr></tr>
-            <tr></tr>
           </thead>
           <tbody>
             <tr>
@@ -92,7 +90,6 @@
                 <input type="text" class="reno-input reno-area-available" />
               </td>
             </tr>
-            <tr></tr>
             <tr>
               <td class="reno-table-label">Per KW RTS Cost</td>
               <td>
@@ -108,8 +105,6 @@
             <tr>
               <th colspan="2" class="reno_input_header">Capacity Inputs</th>
             </tr>
-            <tr></tr>
-            <tr></tr>
           </thead>
           <tbody>
             <tr>
@@ -118,7 +113,6 @@
                 <input type="text" class="reno-input reno-capacity" />
               </td>
             </tr>
-            <tr></tr>
             <tr>
               <td class="reno-table-label">Per KW RTS Cost</td>
               <td>
@@ -130,11 +124,80 @@
       </div>
       <button
         type="submit"
-        class="reno-cal-btn-type-submit reno-cal-btn reno-submit-btn"
+        class="reno-cal-btn-type-submit reno-submit-btn"
       >
         Submit
       </button>
     </div>
-    <div class="reno-calc-result">Here is your Quotation</div>
+    <div class="reno-calc-result">
+      <!-- <h2>Here is your Quotation</h2> -->
+      <table>
+        <thead>
+          <tr>
+            <th colspan="2" class="reno_input_header">Here is your Quotation</th>
+          </tr>          
+        </thead>
+        <tbody class="reno-output-tbl-body">
+          <tr>
+            <td class="reno-ebill-label">Total Units required to generate to go zero electricity bill</td>
+            <td>
+              <input type="text" class="reno-table-output reno-capacity" />
+            </td>
+          </tr>
+          <tr>
+            <td class="reno-ebill-label">Your total electricity bill for the year</td>
+            <td>
+              <input type="text" class="reno-table-output reno-per-kw-cost-cap" />
+            </td>
+          </tr>
+          <tr>
+            <td class="reno-ebill-label">Plant capacity required to generate</td>
+            <td>
+              <input type="text" class="reno-table-output reno-capacity" />
+            </td>
+          </tr>
+          <tr>
+            <td class="reno-ebill-label">Total investment</td>
+            <td>
+              <input type="text" class="reno-table-output reno-capacity" />
+            </td>
+          </tr>
+          <tr>
+            <td class="reno-ebill-label">Total subsidy</td>
+            <td>
+              <input type="text" class="reno-table-output reno-capacity" />
+            </td>
+          </tr>
+          <tr>
+            <td class="reno-ebill-label">Net investment</td>
+            <td>
+              <input type="text" class="reno-table-output reno-capacity" />
+            </td>
+          </tr>
+          <tr>
+            <td class="reno-ebill-label">Area required apprx</td>
+            <td>
+              <input type="text" class="reno-table-output reno-capacity" />
+            </td>
+          </tr>
+          <tr>
+            <td class="reno-ebill-label">Return on investment per year 6480 in percentage</td>
+            <td>
+              <input type="text" class="reno-table-output reno-capacity" />
+            </td>
+          </tr>          
+          <tr>
+            <td class="reno-ebill-label">Pay back period</td>
+            <td>
+              <input type="text" class="reno-table-output reno-capacity" />
+            </td>
+          </tr>
+          
+        </tbody>
+      </table>
+    
+    
+    </div>
+    <button type="button" class="reno-back-btn reno-submit-btn">Back</button>
   </body>
 </html>
