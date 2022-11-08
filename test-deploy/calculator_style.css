@@ -156,3 +156,11 @@ td {
   background-color: #868e96;
   color: white;
 }
+
+.reno-show-result {
+  display: none;
+}
+
+.reno-back-btn {
+  display: none;
+}
