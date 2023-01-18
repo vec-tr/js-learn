@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="calculator_style.css" />
+    <script defer src="calculator.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <img
+          src="img/black-green-removebg-preview.png"
+          alt="Renowatt logo"
+          class="nav__logo"
+          id="logo"
+          designer="Reno"
+          data-version-number="3.0"
+        />
+      </nav>
+    </header>
+    <div class="reno_cal_body">
+      <h2 class="reno_cal_header">Calculator</h2>
+      <p class="reno-p">Please choose boxes as per the requirement</p>
+      <div>
+      <div class="reno-application">
+        <div class="reno-appl-input">
+            <label><input type="checkbox" id="reno_app_res" value="residential" onclick="renoAppCheckBoxRes(this)" />
+                <span>Residential</span></label>
+        </div>
+        <div class="reno-appl-input">
+            <label>
+            <input type="checkbox" id="reno_app_comm" value="commercial" onclick="renoAppCheckBoxComm(this)" />
+            <span>Commercial</span></label>
+      </div>
+    </div>
+    <h2 class="reno_cal_header">Type</h2>
+      <div class="reno-types">      
+        
+            <div class="reno-type-input">
+                <label><input type="checkbox" id="reno_type_bill" value="bill" onclick="renoTypeBill(this)"/>
+                    <span>Electricity Bill</span></label>
+            </div>
+            <div class="reno-type-input">
+                <label><input type="checkbox" id="reno_type_area" value="area" onclick="renoTypeArea(this)"/>
+                    <span>Area</span></label>
+            </div>
+            <div class="reno-type-input">
+                <label><input type="checkbox" id="reno_type_cap" value="cap" onclick="renoTypeCap(this)"/>
+                    <span>Capacity</span></label>
+            </div>
+       
+    </div>
+
+      <div class="reno-inputs-div" id="reno_inputs_div_bill">
+        <table>
+          <thead>
+            <tr>
+              <th colspan="2" class="reno_input_header">Tariff Inputs</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="reno-table-label">Avg Monthly Electricity Bill</td>
+              <td><input type="text" class="reno-input avg-monthly-bill" /></td>
+            </tr>
+            <tr>
+              <td class="reno-table-label">Per KW RTS Cost</td>
+              <td>
+                <input type="text" class="reno-input reno-per-kw-cost-bill" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="reno-inputs-div" id="reno_inputs_div_area">
+        <table>
+          <thead>
+            <tr>
+              <th colspan="2" class="reno_input_header">Area Inputs</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="reno-table-label">Area Available in Sq.ft</td>
+              <td>
+                <input type="text" class="reno-input reno-area-available" />
+              </td>
+            </tr>
+            <tr>
+              <td class="reno-table-label">Per KW RTS Cost</td>
+              <td>
+                <input type="text" class="reno-input reno-per-kw-cost-area" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="reno-inputs-div" id="reno_inputs_div_cap">
+        <table>
+          <thead>
+            <tr>
+              <th colspan="2" class="reno_input_header">Capacity Inputs</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="reno-table-label">Capacity of the Plant</td>
+              <td>
+                <input type="text" class="reno-input reno-capacity" />
+              </td>
+            </tr>
+            <tr>
+              <td class="reno-table-label">Per KW RTS Cost</td>
+              <td>
+                <input type="text" class="reno-input reno-per-kw-cost-cap" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <button
+        type="submit"
+        class="reno-cal-btn-type-submit reno-submit-btn"
+      >
+        Submit
+      </button>
+    </div>
+    <div class="reno-show-result">
+      <!--  <h2>Here is your Quotation</h2> -->
+      <table>
+        <thead>
+          <tr>
+            <th colspan="2" class="reno_input_header">Here is your Quotation</th>
+          </tr>          
+        </thead>
+        <tbody class="reno-output-tbl-body">
+          <tr>
+            <td class="reno-ebill-label ">Total Units required to generate to go zero electricity bill</td>
+            <td>
+              <input type="text" class="reno-table-output reno-total-units" />
+            </td>
+          </tr>
+          <tr>
+            <td class="reno-ebill-label">Your total electricity bill for the year</td>
+            <td>
+              <input type="text" class="reno-table-output reno-bill-for-year" />
+            </td>
+          </tr>
+          <tr>
+            <td class="reno-ebill-label">Plant capacity required to generate</td>
+            <td>
+              <input type="text" class="reno-table-output reno-plant-capacity" />
+            </td>
+          </tr>
+          <tr>
+            <td class="reno-ebill-label">Total investment</td>
+            <td>
+              <input type="text" class="reno-table-output reno-gross-investment" />
+            </td>
+          </tr>
+          <tr>
+            <td class="reno-ebill-label">Total subsidy</td>
+            <td>
+              <input type="text" class="reno-table-output reno-subsidy" />
+            </td>
+          </tr>
+          <tr>
+            <td class="reno-ebill-label">Net investment</td>
+            <td>
+              <input type="text" class="reno-table-output reno-net-investment" />
+            </td>
+          </tr>
+          <tr>
+            <td class="reno-ebill-label">Area required apprx</td>
+            <td>
+              <input type="text" class="reno-table-output reno-area-reqd" />
+            </td>
+          </tr>
+          <tr>
+            <td class="reno-ebill-label">Return on investment per year </td>
+            <td>
+              <input type="text" class="reno-table-output reno-roce-number" />
+            </td>
+          </tr>  
+          <tr>
+            <td class="reno-ebill-label">Return on investment per year in percentage</td>
+            <td>
+              <input type="text" class="reno-table-output reno-roce-percentage" />
+            </td>
+          </tr>           
+          <tr>
+            <td class="reno-ebill-label">Pay back period</td>
+            <td>
+              <input type="text" class="reno-table-output reno-pay-back" />
+            </td>
+          </tr>
+          
+        </tbody>
+      </table>
+    
+    
+    </div>
+    <button type="button" class="reno-back-btn reno-submit-btn">Back</button>
+  </body>
+</html>

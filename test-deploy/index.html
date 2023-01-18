@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="shortcut icon" type="image/png" href="img/R-logo.png" />
-
+    <link rel="shortcut icon" type="image/png" href="img/logo-global.png" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
     <link
       href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap"
       rel="stylesheet"
@@ -16,6 +17,7 @@
     <script defer src="script.js"></script>
   </head>
   <body>
+    <div class="container-fluid">
     <header class="header">
       <nav class="nav">
         <img
@@ -26,6 +28,9 @@
           designer="Reno"
           data-version-number="3.0"
         />
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>--</br>--</br>--
+        </button>
         <ul class="nav__links">
           <li class="nav__item">
             <a class="nav__link" href="#section--1">Features</a>
@@ -37,7 +42,9 @@
             <a class="nav__link" href="#section--3">Projects</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#section--4">Calculator</a>
+            <a class="nav__link" href="calculator.html" target="_blank"
+              >Calculator</a
+            >
           </li>
           <li class="nav__item">
             <a class="nav__link" href="#section--5">Contact us</a>
@@ -52,12 +59,11 @@
 
       <div class="header__title">
         <!-- <h1 onclick="alert('HTML alert')"> -->
-        <h1>
-          We
+        <h1 class="text-left">
           <!-- Green highlight effect -->
-          <span class="highlight">Power</span>
-          Your<br />
-          <span class="highlight">Rooftop</span>
+          <span class="highlight"> Planting </span></br>
+          <span class="highlight1"> Renewable Energy </span></br>
+          <span class="highlight2">For Sustainable Future</span>
         </h1>
         <h4>We provide rooftop solar installation that generates power</h4>
         <button class="btn--text btn--scroll-to">Learn more &DownArrow;</button>
@@ -79,8 +85,8 @@
 
       <div class="features">
         <img
-          src="img/rts-technical.gif"
-          data-src="img/rts-technical.gif"
+          src="img/grid-connected-1.gif"
+          data-src="img/grid-connected-1.gif"
           alt="Solar Plant"
           class="features__img lazy-img"
           width="380px"
@@ -98,46 +104,6 @@
             from the power grid.
           </p>
         </div>
-
-        <!-- <div class="features__feature">
-          <div class="features__icon">
-            <svg>
-              <use xlink:href="img/icons.svg#icon-trending-up"></use>
-            </svg>
-          </div>
-          <h5 class="features__header">Watch your money grow</h5>
-          <p>
-            Nesciunt quos autem dolorum voluptates cum dolores dicta fuga
-            inventore ab? Nulla incidunt eius numquam sequi iste pariatur
-            quibusdam!
-          </p>
-        </div>
-        <img
-          src="img/grow-lazy.jpg"
-          data-src="img/grow.jpg"
-          alt="Plant"
-          class="features__img lazy-img"
-        />
-
-        <img
-          src="img/card-lazy.jpg"
-          data-src="img/card.jpg"
-          alt="Credit card"
-          class="features__img lazy-img"
-        />
-        <div class="features__feature">
-          <div class="features__icon">
-            <svg>
-              <use xlink:href="img/icons.svg#icon-credit-card"></use>
-            </svg>
-          </div>
-          <h5 class="features__header">Free debit card included</h5>
-          <p>
-            Quasi, fugit in cumque cupiditate reprehenderit debitis animi enim
-            eveniet consequatur odit quam quos possimus assumenda dicta fuga
-            inventore ab.
-          </p>
-        </div> -->
       </div>
     </section>
 
@@ -215,80 +181,7 @@
       </div>
     </section>
 
-    <section class="section" id="section--3">
-      <div class="section__title section__title--testimonials">
-        <h2 class="section__description">Projects</h2>
-        <h3 class="section__header">
-          These are our few rooftop solar plant projects commissioned.
-        </h3>
-      </div>
-
-      <div class="slider">
-        <div class="slide">
-          <div class="testimonial">
-            <h5 class="testimonial__header">Best financial decision ever!</h5>
-            <blockquote class="testimonial__text">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Accusantium quas quisquam non? Quas voluptate nulla minima
-              deleniti optio ullam nesciunt, numquam corporis et asperiores
-              laboriosam sunt, praesentium suscipit blanditiis. Necessitatibus
-              id alias reiciendis, perferendis facere pariatur dolore veniam
-              autem esse non voluptatem saepe provident nihil molestiae.
-            </blockquote>
-            <address class="testimonial__author">
-              <img src="img/user-1.jpg" alt="" class="testimonial__photo" />
-              <h6 class="testimonial__name">Aarav Lynn</h6>
-              <p class="testimonial__location">San Francisco, USA</p>
-            </address>
-          </div>
-        </div>
-
-        <div class="slide">
-          <div class="testimonial">
-            <h5 class="testimonial__header">
-              The last step to becoming a complete minimalist
-            </h5>
-            <blockquote class="testimonial__text">
-              Quisquam itaque deserunt ullam, quia ea repellendus provident,
-              ducimus neque ipsam modi voluptatibus doloremque, corrupti
-              laborum. Incidunt numquam perferendis veritatis neque repellendus.
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo
-              deserunt exercitationem deleniti.
-            </blockquote>
-            <address class="testimonial__author">
-              <img src="img/user-2.jpg" alt="" class="testimonial__photo" />
-              <h6 class="testimonial__name">Miyah Miles</h6>
-              <p class="testimonial__location">London, UK</p>
-            </address>
-          </div>
-        </div>
-
-        <div class="slide">
-          <div class="testimonial">
-            <h5 class="testimonial__header">
-              Finally free from old-school banks
-            </h5>
-            <blockquote class="testimonial__text">
-              Debitis, nihil sit minus suscipit magni aperiam vel tenetur
-              incidunt commodi architecto numquam omnis nulla autem,
-              necessitatibus blanditiis modi similique quidem. Odio aliquam
-              culpa dicta beatae quod maiores ipsa minus consequatur error sunt,
-              deleniti saepe aliquid quos inventore sequi. Necessitatibus id
-              alias reiciendis, perferendis facere.
-            </blockquote>
-            <address class="testimonial__author">
-              <img src="img/user-3.jpg" alt="" class="testimonial__photo" />
-              <h6 class="testimonial__name">Francisco Gomes</h6>
-              <p class="testimonial__location">Lisbon, Portugal</p>
-            </address>
-          </div>
-        </div>
-
-        <button class="slider__btn slider__btn--left">&larr;</button>
-        <button class="slider__btn slider__btn--right">&rarr;</button>
-        <div class="dots"></div>
-      </div>
-    </section>
+    
 
     <footer class="footer">
       <p class="footer__copyright">
@@ -313,7 +206,7 @@
       </form>
     </div>
     <div class="overlay hidden"></div>
-
+  </div>
     <!-- <script src="script.js"></script> -->
   </body>
 </html>
